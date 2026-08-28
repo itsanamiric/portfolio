@@ -2,6 +2,10 @@ import Link from "next/link";
 
 import { Container } from "@/components/layout";
 
+export const metadata = {
+  title: "Not found",
+};
+
 export default function NotFound() {
   return (
     <Container className="pt-24 pb-24 sm:pt-32">
