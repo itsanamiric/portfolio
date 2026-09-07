@@ -5,11 +5,29 @@ export const site = {
   email: "ana-miric@hotmail.com",
   github: "https://github.com/itsanamiric",
   githubHandle: "itsanamiric",
-  location: "Belgrade",
-  timezone: "Europe/Belgrade",
-  oneLiner: "Building for the web, from Belgrade.",
+  homeplace: "Belgrade",
+  currentCity: "Málaga",
+  location: "Málaga",
+  route: "Belgrade → Málaga",
+  timezone: "Europe/Madrid",
+  oneLiner: "Geographer by education, from Belgrade, living in Málaga.",
   description:
-    "Ana Miric builds for the web with TypeScript, React, and Next.js. Selected work lives here as it is ready to share.",
+    "Ana Miric is a geographer by education, from Belgrade, living in Málaga. Travel, the web, and coffee.",
+} as const;
+
+export const places = {
+  malaga: {
+    name: "Málaga",
+    note: "now",
+    lat: 36.7213,
+    lon: -4.4214,
+  },
+  belgrade: {
+    name: "Belgrade",
+    note: "home",
+    lat: 44.7866,
+    lon: 20.4489,
+  },
 } as const;
 
 export const nav = [

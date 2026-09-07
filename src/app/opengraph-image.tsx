@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
             color: "#7a5347",
           }}
         >
-          {site.location}
+          {site.route}
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div

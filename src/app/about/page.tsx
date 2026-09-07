@@ -16,13 +16,15 @@ export default function AboutPage() {
       </PageIntro>
       <div className="max-w-md space-y-5 text-[1.05rem] leading-[1.7]">
         <p>
-          I&apos;m Ana. I live in Belgrade, and I build for the web —
-          TypeScript, React, Next.js, and a stack I can stand behind.
+          I&apos;m Ana. Geographer by education, traveler by habit. I live in
+          Málaga now; Belgrade is homeplace.
         </p>
         <p>
-          This site is the first thing I&apos;m putting in public. The work
-          will follow here, on its own time.
+          This site is the first thing I&apos;m putting in public — TypeScript,
+          React, Next.js, and a stack I can stand behind. The work will follow
+          here, on its own time.
         </p>
+        <p>Coffee comes with me. It always has.</p>
         <p>
           If you want to talk,{" "}
           <a
