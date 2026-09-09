@@ -13,7 +13,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Container } from "@/components/layout";
 import { nav, site } from "@/content/site";
 import { cn } from "@/lib/utils";
 
@@ -28,7 +27,7 @@ function NavLinks({
 
   return (
     <nav aria-label="Primary" className={className}>
-      <ul className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-7">
+      <ul className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-8">
         {nav.map((item) => {
           const active =
             pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -39,7 +38,7 @@ function NavLinks({
                 href={item.href}
                 onClick={onNavigate}
                 className={cn(
-                  "font-mono text-[11px] tracking-[0.2em] uppercase transition-colors",
+                  "font-mono text-[11px] tracking-[0.22em] uppercase transition-colors",
                   active
                     ? "text-foreground"
                     : "text-muted-foreground hover:text-foreground",
@@ -55,13 +54,19 @@ function NavLinks({
   );
 }
 
-export function SiteHeader() {
+export function SiteHeader({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-border">
-      <div className="h-0.5 bg-accent" aria-hidden="true" />
-      <Container className="flex h-14 items-center justify-between">
+    <header
+      className={cn(
+        "z-30 w-full",
+        overlay
+          ? "absolute inset-x-0 top-0"
+          : "sticky top-0 border-b border-border/70 bg-background/80 backdrop-blur-md",
+      )}
+    >
+      <div className="mx-auto flex h-14 w-full max-w-[88rem] items-center justify-between px-6 sm:px-10">
         <Link
           href="/"
           className="font-mono text-[11px] tracking-[0.22em] text-foreground uppercase"
@@ -84,7 +89,7 @@ export function SiteHeader() {
           </SheetTrigger>
           <SheetContent side="right" className="w-[80vw] max-w-xs bg-background">
             <SheetHeader>
-              <SheetTitle className="font-serif text-2xl font-normal tracking-tight">
+              <SheetTitle className="font-sans text-lg font-bold tracking-tight uppercase">
                 {site.name}
               </SheetTitle>
             </SheetHeader>
@@ -93,7 +98,7 @@ export function SiteHeader() {
             </div>
           </SheetContent>
         </Sheet>
-      </Container>
+      </div>
     </header>
   );
 }

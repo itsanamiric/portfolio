@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono, Great_Vibes } from "next/font/google";
 
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
+import { SiteChrome } from "@/components/site-chrome";
 import { getSiteUrl, site } from "@/content/site";
 
 import "./globals.css";
@@ -17,11 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin", "latin-ext"],
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument",
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
   subsets: ["latin", "latin-ext"],
   weight: "400",
-  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
@@ -51,14 +49,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f4eee4",
+  themeColor: "#0a0a0c",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en-GB"
-      className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} h-full antialiased`}
+      className={`dark ${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
         <a
@@ -67,11 +65,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         >
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="content" className="flex-1">
-          {children}
-        </main>
-        <SiteFooter />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );

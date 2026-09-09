@@ -10,9 +10,9 @@ export const site = {
   location: "Málaga",
   route: "Belgrade → Málaga",
   timezone: "Europe/Madrid",
-  oneLiner: "Geographer by education, from Belgrade, living in Málaga.",
+  oneLiner: "Geographer by education, learning AI. Belgrade → Málaga.",
   description:
-    "Ana Miric is a geographer by education, from Belgrade, living in Málaga. Travel, the web, and coffee.",
+    "Ana Miric — geographer by education, learning AI. From Belgrade, living in Málaga.",
 } as const;
 
 export const places = {

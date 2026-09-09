@@ -1,10 +1,10 @@
 # Ana Miric — personal site
 
-Quiet editorial site for selected work, a short about, and a real way to write.
+Dark homepage with a MapCN globe (Belgrade → Málaga), plus Work, About, and a real way to write.
 
 ## Stack
 
-pnpm, TypeScript, Next.js (App Router), Tailwind CSS, shadcn/ui. Content lives in typed files so the first version does not depend on a database.
+pnpm, TypeScript, Next.js (App Router), Tailwind CSS, shadcn/ui, [mapcn](https://mapcn.vercel.app/docs) (MapLibre). Content lives in typed files so the first version does not depend on a database.
 
 ## Run locally
 

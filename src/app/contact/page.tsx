@@ -16,7 +16,7 @@ export default function ContactPage() {
         The shortest path is email. GitHub is public, and still new.
       </PageIntro>
 
-      <p className="font-serif text-2xl tracking-tight sm:text-3xl">
+      <p className="font-sans text-2xl font-bold tracking-tight sm:text-3xl">
         <a
           href={`mailto:${site.email}`}
           className="underline decoration-border underline-offset-4 transition-colors hover:text-accent"

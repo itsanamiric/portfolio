@@ -26,7 +26,7 @@ export function ProjectList({
         <div className="grid grid-cols-[2.5rem_minmax(0,1fr)_3.25rem] gap-x-4 border-b border-border py-7">
           <span className="font-mono text-sm text-muted-foreground">—</span>
           <div>
-            <p className="font-serif text-[1.35rem] leading-tight text-foreground/80">
+            <p className="font-sans text-[1.25rem] leading-tight font-semibold text-foreground/80">
               Forthcoming
             </p>
             <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">
@@ -49,7 +49,7 @@ export function ProjectList({
                   {padIndex(index)}
                 </span>
                 <div>
-                  <p className="font-serif text-[1.35rem] leading-tight">
+                  <p className="font-sans text-[1.25rem] leading-tight font-semibold">
                     {project.title}
                   </p>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">
@@ -101,7 +101,7 @@ export function HomeIndex() {
             <span className="font-mono text-[11px] tracking-[0.16em] text-muted-foreground">
               {item.number}
             </span>
-            <span className="font-serif text-xl tracking-tight group-hover:text-accent">
+            <span className="font-sans text-xl font-semibold tracking-tight group-hover:text-accent">
               {item.label}
             </span>
             <span className="col-start-2 mt-1 text-sm text-muted-foreground sm:col-start-3 sm:mt-0">
