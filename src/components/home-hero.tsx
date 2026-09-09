@@ -69,12 +69,12 @@ export function HomeHero() {
         aria-hidden="true"
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[88rem] flex-1 flex-col justify-center px-6 pt-20 pb-16 sm:px-10 lg:grid lg:grid-cols-[1fr_minmax(18rem,40vw)_1fr] lg:items-center lg:gap-6 lg:pt-8">
-        <div className="order-1 max-w-md lg:order-none">
+      <div className="relative z-10 mx-auto flex w-full max-w-[88rem] flex-1 flex-col justify-center px-6 pt-20 pb-16 sm:px-10 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(20rem,36vw)_minmax(0,1fr)] lg:items-center lg:gap-8 lg:pt-8">
+        <div className="order-1 min-w-0 lg:order-none">
           <p className="font-script text-[clamp(3.4rem,8vw,6.5rem)] leading-[0.85] text-white">
             Creative
           </p>
-          <h1 className="mt-2 font-sans text-[clamp(2.4rem,6vw,4.6rem)] leading-[0.9] font-bold tracking-[-0.04em] text-white uppercase">
+          <h1 className="mt-2 font-sans text-[clamp(1.85rem,4.2vw,3.25rem)] leading-none font-bold tracking-[-0.04em] text-white uppercase whitespace-nowrap">
             GEO <span className="text-neon-magenta">×</span> AI.
           </h1>
         </div>
@@ -94,8 +94,8 @@ export function HomeHero() {
                 theme="dark"
                 styles={{ dark: neonGlobeStyle, light: neonGlobeStyle }}
                 projection={{ type: "globe" }}
-                center={[8, 41]}
-                zoom={1.45}
+                center={[8, 38]}
+                zoom={1.62}
                 minZoom={0.6}
                 maxZoom={4}
                 pitch={0}
