@@ -2,7 +2,7 @@ import type { StyleSpecification } from "maplibre-gl";
 
 export const NEON = {
   space: "#0a0a0c",
-  water: "#00c8f0",
+  water: "#00e5ff",
   land: "#ffffff",
   landLine: "#ff4dcc",
   magenta: "#ff4dcc",
@@ -48,7 +48,7 @@ export const neonGlobeStyle: StyleSpecification = {
     "sky-color": NEON.space,
     "horizon-color": "#041018",
     "fog-color": NEON.water,
-    "fog-ground-blend": 0.28,
-    "atmosphere-blend": 0.22,
+    "fog-ground-blend": 0.18,
+    "atmosphere-blend": 0.12,
   },
 };
