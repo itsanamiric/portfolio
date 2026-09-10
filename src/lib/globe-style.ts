@@ -1,20 +1,29 @@
 import type { StyleSpecification } from "maplibre-gl";
 
+/**
+ * Closest MapCN / MapLibre match to Ana’s iridescent holographic sphere:
+ * electric cyan–aqua oceans, hot magenta / fuchsia / violet land, silver
+ * specular marks, near-black space, and a bright white atmospheric rim.
+ * Geographic fills cannot paint oil-slick swirls — contrast + glow do the work.
+ */
 export const NEON = {
-  space: "#0a0a0c",
-  water: "#1a6bff",
-  waterCyan: "#00c8ff",
-  land: "#ff2eb8",
-  landLine: "#7a1fb8",
-  magenta: "#ff4dcc",
-  magentaSoft: "#ff9ad6",
-  silver: "#f5f7fa",
-  silverSoft: "#e8eef5",
+  space: "#050508",
+  water: "#00D2FF",
+  waterCyan: "#5EFFF8",
+  land: "#FF0090",
+  landHot: "#FF3AD8",
+  landLine: "#5B1FA8",
+  violet: "#7C3AED",
+  magenta: "#FF2EC8",
+  magentaSoft: "#FF7AE0",
+  silver: "#F7F8FC",
+  silverSoft: "#EEF2F7",
+  glow: "#FFFFFF",
 } as const;
 
-/** Hot-pink land on cobalt / neon-cyan water. Space around the globe stays near-black. */
 export const neonGlobeStyle: StyleSpecification = {
   version: 8,
+  projection: { type: "globe" },
   sources: {
     land: {
       type: "geojson",
@@ -34,6 +43,7 @@ export const neonGlobeStyle: StyleSpecification = {
       paint: {
         "fill-color": NEON.land,
         "fill-opacity": 1,
+        "fill-outline-color": NEON.violet,
       },
     },
     {
@@ -42,16 +52,29 @@ export const neonGlobeStyle: StyleSpecification = {
       source: "land",
       paint: {
         "line-color": NEON.landLine,
-        "line-width": 0.6,
-        "line-opacity": 0.55,
+        "line-width": 0.7,
+        "line-opacity": 0.75,
+      },
+    },
+    {
+      id: "land-sheen",
+      type: "line",
+      source: "land",
+      paint: {
+        "line-color": NEON.landHot,
+        "line-width": 0.35,
+        "line-opacity": 0.45,
+        "line-blur": 0.6,
       },
     },
   ],
   sky: {
     "sky-color": NEON.space,
-    "horizon-color": "#041028",
+    "horizon-color": "#D8EEFF",
     "fog-color": NEON.waterCyan,
-    "fog-ground-blend": 0.2,
-    "atmosphere-blend": 0.16,
+    "fog-ground-blend": 0.08,
+    "horizon-fog-blend": 0.18,
+    "sky-horizon-blend": 0.22,
+    "atmosphere-blend": 0.14,
   },
 };
