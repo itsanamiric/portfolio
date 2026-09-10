@@ -8,8 +8,8 @@ import type { StyleSpecification } from "maplibre-gl";
  */
 export const NEON = {
   space: "#050508",
-  water: "#00D2FF",
-  waterCyan: "#5EFFF8",
+  water: "#00FFF2",
+  waterCyan: "#9EFFF6",
   land: "#FF0090",
   landHot: "#FF3AD8",
   landLine: "#5B1FA8",
@@ -70,11 +70,11 @@ export const neonGlobeStyle: StyleSpecification = {
   ],
   sky: {
     "sky-color": NEON.space,
-    "horizon-color": "#D8EEFF",
-    "fog-color": NEON.waterCyan,
-    "fog-ground-blend": 0.08,
-    "horizon-fog-blend": 0.18,
-    "sky-horizon-blend": 0.22,
-    "atmosphere-blend": 0.14,
+    "horizon-color": NEON.waterCyan,
+    "fog-color": NEON.water,
+    "fog-ground-blend": 0.04,
+    "horizon-fog-blend": 0.12,
+    "sky-horizon-blend": 0.16,
+    "atmosphere-blend": 0.06,
   },
 };
