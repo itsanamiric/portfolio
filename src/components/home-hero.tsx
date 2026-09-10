@@ -54,13 +54,13 @@ function PlaceMarker({
         <div
           className="size-2.5 rounded-full"
           style={{
-            background: NEON.magenta,
-            boxShadow: `0 0 12px ${NEON.magenta}`,
+            background: NEON.silver,
+            boxShadow: `0 0 12px ${NEON.waterCyan}`,
           }}
         />
         <MarkerLabel
           position={position}
-          className="font-mono text-[11px] tracking-[0.18em] text-neon-magenta uppercase"
+          className="font-mono text-[11px] tracking-[0.18em] text-white uppercase"
         >
           {name}
           <span className="mx-1 opacity-50">·</span>
@@ -85,7 +85,7 @@ export function HomeHero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 48%, rgba(0,229,255,0.14), transparent 58%)",
+            "radial-gradient(ellipse 70% 50% at 50% 48%, rgba(0,200,255,0.16), transparent 58%)",
         }}
         aria-hidden="true"
       />
@@ -105,7 +105,7 @@ export function HomeHero() {
             <div
               className="pointer-events-none absolute inset-[-14%] rounded-full"
               style={{
-                background: `radial-gradient(circle, ${NEON.water}40 0%, ${NEON.magenta}16 38%, transparent 68%)`,
+                background: `radial-gradient(circle, ${NEON.waterCyan}50 0%, ${NEON.water}22 42%, transparent 70%)`,
                 filter: "blur(28px)",
               }}
               aria-hidden="true"
@@ -127,11 +127,12 @@ export function HomeHero() {
                   curvature={0.26}
                   interactive
                   paint={{
-                    "line-color": NEON.magenta,
+                    "line-color": NEON.silver,
                     "line-width": 2.25,
                     "line-opacity": 0.92,
                   }}
                   hoverPaint={{
+                    "line-color": NEON.silverSoft,
                     "line-width": 3.75,
                     "line-opacity": 1,
                   }}
@@ -170,7 +171,7 @@ export function HomeHero() {
                     closeOnClick={false}
                     className="p-0"
                   >
-                    <div className="bg-background/80 rounded-sm px-2.5 py-1.5 font-mono text-[11px] tracking-[0.16em] text-neon-magenta uppercase backdrop-blur">
+                    <div className="bg-background/80 rounded-sm px-2.5 py-1.5 font-mono text-[11px] tracking-[0.16em] text-white uppercase backdrop-blur">
                       {hover.origin}
                       <span className="mx-1.5 opacity-60">→</span>
                       {hover.destination}

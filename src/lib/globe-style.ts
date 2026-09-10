@@ -2,14 +2,17 @@ import type { StyleSpecification } from "maplibre-gl";
 
 export const NEON = {
   space: "#0a0a0c",
-  water: "#00e5ff",
-  land: "#ffffff",
-  landLine: "#ff4dcc",
+  water: "#1a6bff",
+  waterCyan: "#00c8ff",
+  land: "#ff2eb8",
+  landLine: "#7a1fb8",
   magenta: "#ff4dcc",
   magentaSoft: "#ff9ad6",
+  silver: "#f5f7fa",
+  silverSoft: "#e8eef5",
 } as const;
 
-/** White land on neon-cyan water. Space around the globe stays near-black. */
+/** Hot-pink land on cobalt / neon-cyan water. Space around the globe stays near-black. */
 export const neonGlobeStyle: StyleSpecification = {
   version: 8,
   sources: {
@@ -39,16 +42,16 @@ export const neonGlobeStyle: StyleSpecification = {
       source: "land",
       paint: {
         "line-color": NEON.landLine,
-        "line-width": 0.55,
-        "line-opacity": 0.42,
+        "line-width": 0.6,
+        "line-opacity": 0.55,
       },
     },
   ],
   sky: {
     "sky-color": NEON.space,
-    "horizon-color": "#041018",
-    "fog-color": NEON.water,
-    "fog-ground-blend": 0.18,
-    "atmosphere-blend": 0.12,
+    "horizon-color": "#041028",
+    "fog-color": NEON.waterCyan,
+    "fog-ground-blend": 0.2,
+    "atmosphere-blend": 0.16,
   },
 };
