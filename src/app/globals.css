@@ -127,4 +127,23 @@
   .maplibregl-ctrl-attrib-button {
     @apply bg-transparent! invert;
   }
+
+  /*
+   * WebGL canvases ignore overflow + border-radius / clip-path on ancestors,
+   * and CSS mask-image on the <canvas> itself blanks the map. Cover the
+   * square corners with a regular HTML overlay instead (circular window).
+   */
+  .globe-stage .maplibregl-map,
+  .globe-stage .maplibregl-canvas-container,
+  .globe-stage .maplibregl-canvas {
+    background: transparent !important;
+  }
+
+  .globe-corner-mask {
+    background: radial-gradient(
+      circle closest-side at center,
+      transparent 99.2%,
+      var(--background) 100%
+    );
+  }
 }
