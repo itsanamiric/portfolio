@@ -55,7 +55,7 @@ function PlaceMarker({
           className="size-2.5 rounded-full"
           style={{
             background: NEON.silver,
-            boxShadow: `0 0 12px ${NEON.waterCyan}`,
+            boxShadow: `0 0 10px ${NEON.glow}, 0 0 18px ${NEON.silverSoft}`,
           }}
         />
         <MarkerLabel
@@ -85,7 +85,7 @@ export function HomeHero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 48%, rgba(0,200,255,0.16), transparent 58%)",
+            "radial-gradient(ellipse 62% 48% at 50% 48%, rgba(255,255,255,0.10), transparent 60%)",
         }}
         aria-hidden="true"
       />
@@ -101,12 +101,22 @@ export function HomeHero() {
         </div>
 
         <div className="order-3 my-10 flex justify-center lg:order-none lg:my-0">
-          <div className="relative aspect-square w-[min(86vw,28rem)] lg:w-full">
+          <div
+            className="relative aspect-square w-[min(86vw,28rem)] lg:w-full"
+            style={{ aspectRatio: "1 / 1" }}
+          >
             <div
-              className="pointer-events-none absolute inset-[-14%] rounded-full"
+              className="pointer-events-none absolute inset-[-24%] rounded-full"
               style={{
-                background: `radial-gradient(circle, ${NEON.waterCyan}50 0%, ${NEON.water}22 42%, transparent 70%)`,
-                filter: "blur(28px)",
+                background: `radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.22) 32%, ${NEON.waterCyan}18 52%, transparent 72%)`,
+                filter: "blur(34px)",
+              }}
+              aria-hidden="true"
+            />
+            <div
+              className="pointer-events-none absolute inset-[-3%] rounded-full"
+              style={{
+                boxShadow: `0 0 28px 6px rgba(255,255,255,0.42), 0 0 64px 16px rgba(255,255,255,0.18), 0 0 90px 28px ${NEON.waterCyan}22`,
               }}
               aria-hidden="true"
             />
@@ -116,11 +126,11 @@ export function HomeHero() {
                 styles={{ dark: neonGlobeStyle, light: neonGlobeStyle }}
                 projection={{ type: "globe" }}
                 center={[8, 38]}
-                zoom={1.62}
+                zoom={1.18}
                 minZoom={0.4}
                 maxZoom={6}
                 attributionControl={{ compact: true }}
-                className="h-full w-full cursor-grab bg-transparent active:cursor-grabbing [&_.maplibregl-canvas]:cursor-grab [&_.maplibregl-ctrl-attrib]:opacity-40"
+                className="h-full w-full cursor-grab bg-transparent active:cursor-grabbing [&_.maplibregl-canvas-container]:overflow-hidden [&_.maplibregl-canvas-container]:rounded-full [&_.maplibregl-canvas-container]:[clip-path:circle(50%)] [&_.maplibregl-canvas]:rounded-full [&_.maplibregl-canvas]:[clip-path:circle(50%)] [&_.maplibregl-canvas]:cursor-grab [&_.maplibregl-ctrl-attrib]:opacity-40"
               >
                 <MapArc
                   data={arc}
@@ -179,6 +189,15 @@ export function HomeHero() {
                   </MapPopup>
                 ) : null}
               </Map>
+              <div
+                className="pointer-events-none absolute inset-0 rounded-full [clip-path:circle(50%)]"
+                style={{
+                  background:
+                    "radial-gradient(ellipse 58% 46% at 34% 26%, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.10) 32%, transparent 58%)",
+                  mixBlendMode: "screen",
+                }}
+                aria-hidden="true"
+              />
             </div>
           </div>
         </div>
