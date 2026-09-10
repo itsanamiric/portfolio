@@ -91,8 +91,8 @@ export function HomeHero() {
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[96rem] flex-1 flex-col justify-center px-5 pt-20 pb-16 sm:px-8 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(15rem,28vw)_minmax(0,1.15fr)] lg:items-center lg:gap-5 lg:pt-6">
-        <div className="order-1 min-w-0 lg:order-none">
-          <p className="font-script text-[clamp(4.6rem,15vw,13rem)] leading-[0.78] text-white">
+        <div className="order-1 relative z-20 min-w-0 lg:order-none">
+          <p className="pointer-events-none w-max font-script text-[clamp(4.6rem,13.5vw,13rem)] leading-[0.78] whitespace-nowrap text-white lg:-translate-x-[min(7.5rem,max(1.75rem,calc((100vw-96rem)/2+3.25rem)))]">
             Creative
           </p>
           <h1 className="mt-1 font-sans text-[clamp(2.35rem,7.6vw,6.4rem)] leading-[0.85] font-bold tracking-[-0.045em] text-white uppercase">
