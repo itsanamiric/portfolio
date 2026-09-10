@@ -106,31 +106,31 @@ export function HomeHero() {
             style={{ aspectRatio: "1 / 1" }}
           >
             <div
-              className="pointer-events-none absolute inset-[-24%] rounded-full"
+              className="pointer-events-none absolute inset-[-26%] rounded-full"
               style={{
-                background: `radial-gradient(circle, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.22) 32%, ${NEON.waterCyan}18 52%, transparent 72%)`,
-                filter: "blur(34px)",
+                background: `radial-gradient(circle, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.28) 30%, ${NEON.waterCyan}14 50%, transparent 72%)`,
+                filter: "blur(36px)",
               }}
               aria-hidden="true"
             />
             <div
-              className="pointer-events-none absolute inset-[-3%] rounded-full"
+              className="pointer-events-none absolute inset-[-2%] rounded-full"
               style={{
-                boxShadow: `0 0 28px 6px rgba(255,255,255,0.42), 0 0 64px 16px rgba(255,255,255,0.18), 0 0 90px 28px ${NEON.waterCyan}22`,
+                boxShadow: `0 0 22px 5px rgba(255,255,255,0.55), 0 0 56px 14px rgba(255,255,255,0.22), 0 0 88px 26px ${NEON.waterCyan}18`,
               }}
               aria-hidden="true"
             />
-            <div className="relative z-10 h-full w-full">
+            <div className="relative z-10 h-full w-full overflow-hidden rounded-full bg-background [clip-path:circle(closest-side_at_center)]">
               <Map
                 theme="dark"
                 styles={{ dark: neonGlobeStyle, light: neonGlobeStyle }}
                 projection={{ type: "globe" }}
                 center={[8, 38]}
-                zoom={1.18}
+                zoom={1.64}
                 minZoom={0.4}
                 maxZoom={6}
                 attributionControl={{ compact: true }}
-                className="h-full w-full cursor-grab bg-transparent active:cursor-grabbing [&_.maplibregl-canvas-container]:overflow-hidden [&_.maplibregl-canvas-container]:rounded-full [&_.maplibregl-canvas-container]:[clip-path:circle(50%)] [&_.maplibregl-canvas]:rounded-full [&_.maplibregl-canvas]:[clip-path:circle(50%)] [&_.maplibregl-canvas]:cursor-grab [&_.maplibregl-ctrl-attrib]:opacity-40"
+                className="h-full w-full cursor-grab bg-transparent active:cursor-grabbing [&_.maplibregl-canvas]:cursor-grab [&_.maplibregl-ctrl-attrib]:opacity-40"
               >
                 <MapArc
                   data={arc}
@@ -190,11 +190,10 @@ export function HomeHero() {
                 ) : null}
               </Map>
               <div
-                className="pointer-events-none absolute inset-0 rounded-full [clip-path:circle(50%)]"
+                className="pointer-events-none absolute inset-0 rounded-full [clip-path:circle(closest-side_at_center)]"
                 style={{
                   background:
-                    "radial-gradient(ellipse 58% 46% at 34% 26%, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.10) 32%, transparent 58%)",
-                  mixBlendMode: "screen",
+                    "radial-gradient(ellipse 42% 34% at 32% 22%, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.05) 36%, transparent 58%)",
                 }}
                 aria-hidden="true"
               />
